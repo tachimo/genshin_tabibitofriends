@@ -42,10 +42,13 @@
 
 # ■スケジュール
 企画〜技術調査：7/6 〆切（技術調査は、7/6以降も継続）.  
-README〜ER図作成：7/17 〆切.   
-メイン機能実装：7/17 - 8/12.   
-β版をRUNTEQ内リリース（MVP）：8/13〆切.  
-本番リリース：8月末
+README〜ER図作成：7/20 〆切.   
+メイン機能実装：7/20 - 8/19.   
+β版をRUNTEQ内リリース（MVP）：8/20〆切.  
+本番リリース：9月上旬
 
 # ■画面遷移図
 https://www.figma.com/file/MjSUJiucVujcmA5zSGwUve/Untitled?node-id=0%3A1
+
+# ■ER図
+https://gyazo.com/81bab50a425269b368fd96e4edde65df

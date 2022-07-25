@@ -51,4 +51,4 @@ README〜ER図作成：7/26 〆切.
 https://www.figma.com/file/MjSUJiucVujcmA5zSGwUve/Untitled?node-id=0%3A1
 
 # ■ER図
-https://gyazo.com/0fd32bd92e1533d575bbaf7998e926cf
+https://gyazo.com/64ba4acfec8831b90c9c707747de1b43

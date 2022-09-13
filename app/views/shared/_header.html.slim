@@ -1,0 +1,11 @@
+header#header.header-top
+  div.header-container
+      = link_to 'ホーム', root_path
+      - if logged_in?
+        = link_to 'マイページ', user_path(current_user.id)
+        = button_to 'ログアウト', logout_path, method: :delete
+        = link_to '旅人一覧', '#'
+        = link_to '募集一覧', '#'
+      - else
+        = link_to '新規登録', new_user_path
+        = link_to 'ログイン', login_path

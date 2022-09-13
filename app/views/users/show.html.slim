@@ -1,2 +1,42 @@
-h1 Users#show
-p Find me in app/views/users/show.html.slim
+.cover-user-show
+  .container
+    .row.justify-content-center
+      - if logged_in? && @user == current_user
+        h1.font-weight-normal.mt-5.mb-5
+          | マイページ
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.name
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.player_uid
+        / .mypagecontainer
+          / p.font-weight-normal.mt-5.mb-5
+            / = @user.player
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.world_rank
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.introduction
+        = link_to 'マイページ更新へ', edit_user_path
+      - else
+        h1.font-weight-normal.mt-5.mb-5
+          = @user.name
+          | さんのページ
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.name
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.player_uid
+        / .mypagecontainer
+          / p.font-weight-normal.mt-5.mb-5
+            / = @user.player
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.world_rank
+        .mypagecontainer
+          p.font-weight-normal.mt-5.mb-5
+            = @user.introduction
+

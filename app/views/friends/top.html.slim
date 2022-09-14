@@ -1,0 +1,8 @@
+h1
+  | 旅人一覧
+
+  ul.users
+    - @users.each do |user|
+      li 
+        /# = gravatar_for user, size: 50
+        = link_to user.name, user

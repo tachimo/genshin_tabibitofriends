@@ -1,0 +1,14 @@
+h1
+  | マルチ募集登録
+
+.nav.justify-content-end
+  = link_to '一覧', boards_path, class: 'btn btn-primary'
+
+= form_with model: @board, url: boards_path, local: true do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control', id: 'board_title'
+  .form-group
+    = f.label :body
+    = f.text_area :body, rows: 5, class: 'form-control', id: 'board_body'
+  = f.submit '投稿する', class: 'btn btn-primary'

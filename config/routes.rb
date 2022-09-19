@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'friends/top'
   
   resources :users, only: %i[index new create edit show update destroy]
+  resources :boards, only: %i[index new create edit show update destroy]
 end

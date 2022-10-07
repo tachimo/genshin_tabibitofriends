@@ -62,10 +62,14 @@ gem 'sorcery', '0.16.3'
 
 gem 'cssbundling-rails'
 gem 'font-awesome-sass'
-gem 'jquery-rails'
 
 gem 'slim-rails'
 gem 'html2slim'
 
 gem 'ransack'
 gem 'kaminari'
+
+gem 'pry-byebug'
+gem 'pry-rails'
+
+gem 'react-rails'

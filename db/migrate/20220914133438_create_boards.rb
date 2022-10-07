@@ -3,6 +3,7 @@ class CreateBoards < ActiveRecord::Migration[7.0]
     create_table :boards do |t|
       t.string :title
       t.text :body
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

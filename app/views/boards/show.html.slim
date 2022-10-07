@@ -22,3 +22,7 @@ table.table.table-hover
   
 = link_to '編集', edit_board_path, class: 'btn btn-primary mr-3'
 / = button_to '削除', @board, method::delete, data: { confirm: "募集「#{@board.title}」を削除します。よろしいですか？"}, class: "btn btn-danger"
+
+== render 'comments/form', { board: @board, comment: @comment }
+
+== render 'comments/comments', { comments: @comments }

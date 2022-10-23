@@ -71,5 +71,3 @@ gem 'kaminari'
 
 gem 'pry-byebug'
 gem 'pry-rails'
-
-gem 'react-rails'

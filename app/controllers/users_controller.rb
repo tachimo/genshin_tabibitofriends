@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all.includes(:user).order(created_at: :desc).page(params[:page])
+    @search = User.ransack(params[:q])
+    @users = @search.result(distinct: true).order(created_at: :desc).page(params[:page])
   end
 
   def new

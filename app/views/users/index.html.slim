@@ -1,2 +1,15 @@
-h1 Users#index
-p Find me in app/views/users/index.html.slim
+h1
+  | 旅人一覧
+
+= search_form_for @search do |f|
+  .input-group.mb-3
+    = f.search_field :name_or_introduction_cont, class: "form-control", placeholder: "検索ワード"
+  .input-group-append
+    = f.submit "検索", class: "btn btn-primary"
+
+  ul.users
+    - @users.each do |user|
+      li 
+        /# = gravatar_for user, size: 50
+        = link_to user.name, user
+    = paginate @users

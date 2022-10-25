@@ -4,7 +4,7 @@ header#header.header-top
       - if logged_in?
         = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'
         = button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-outline-primary'
-        = link_to '旅人一覧', friends_top_path, class: 'btn btn-outline-primary'
+        = link_to '旅人一覧', users_path, class: 'btn btn-outline-primary'
         = link_to '募集一覧', boards_path, class: 'btn btn-outline-primary'
       - else
         = link_to '新規登録', new_user_path, class: 'btn btn-outline-primary'

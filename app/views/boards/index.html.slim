@@ -1,8 +1,6 @@
-h1
-  | マルチ募集一覧
-p
-  | 募集一覧
-= link_to '新規登録', new_board_path, class: 'btn btn-primary'
+.board-index
+  h1
+    | マルチ募集
 
 = search_form_for @search do |f|
   .input-group.mb-3
@@ -10,22 +8,33 @@ p
   .input-group-append
     = f.submit "検索", class: "btn btn-primary"
 
+.board-list
+  h2
+    | 募集一覧
+
+= link_to '新規登録', new_board_path, class: 'btn btn-primary'
+
+= paginate @boards, theme: 'bootstrap-5'
+
 .mb-3
-table.table.table-hover
-  thead.thead-default
-    tr
-      th = 'タイトル'
-      th = '登録日時'
-      th
-  tbody
-    - @boards.each do |board|
-      tr
-        td = board.title
-        td = board.created_at
-        td
-          = link_to '編集', edit_board_path(board), class: 'btn btn-primary mr-3'
-        td
-          = link_to '詳細', board_path(board), class: 'btn btn-primary mr-3'
-        td
-          = button_to '削除', board, method: :delete, data: { confirm: "募集を削除します。よろしいですか？"}, class: "btn btn-danger"
-    = paginate @boards
+ul.boards
+  - @boards.each do |board|
+    .friend-board
+      .card style=("width: 18rem;")
+        .card-body
+          .card-columns
+            flex-direction:row
+              tr
+                .board-title
+                  td = board.title
+                .board-created
+                  td = board.created_at
+                td
+                  = link_to '詳細', board_path(board), class: 'btn btn-primary mr-3'
+                td
+                  - if current_user.own?(board)
+                    = link_to '編集', edit_board_path(board), class: 'btn btn-primary mr-3'
+                td
+                  - if current_user.own?(board)
+                    = button_to '削除', board, method: :delete, data: { confirm: "募集を削除します。よろしいですか？"}, class: "btn btn-danger"
+= paginate @boards, theme: 'bootstrap-5'

@@ -1,42 +1,41 @@
-.cover-user-show
-  .container
-    .row.justify-content-center
-      - if logged_in? && @user == current_user
-        h1.font-weight-normal.mt-5.mb-5
-          | マイページ
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.name
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.player_uid
-        / .mypagecontainer
-          / p.font-weight-normal.mt-5.mb-5
-            / = @user.player
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.world_rank
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.introduction
-        = link_to 'マイページ更新へ', edit_user_path
-      - else
-        h1.font-weight-normal.mt-5.mb-5
-          = @user.name
-          | さんのページ
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.name
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.player_uid
-        / .mypagecontainer
-          / p.font-weight-normal.mt-5.mb-5
-            / = @user.player
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.world_rank
-        .mypagecontainer
-          p.font-weight-normal.mt-5.mb-5
-            = @user.introduction
+.my-page
+  .mypage-image
+    - image_tag '2021021911253557998.png'
+    h1.font-weight-normal.mt-5.mb-5
+      | マイページ
+- if logged_in? && @user == current_user
+  table.table.table
+    tbody
+      tr
+        th= "名前"
+        td= @user.name
+      tr
+        th= "ユーザーID"
+        td= @user.player_uid
+      tr
+        th= "世界ランク"
+        td= @user.world_rank
+      tr
+        th= "プレイ内容"
+        td= @user.introduction
+  = link_to 'マイページ更新へ', edit_user_path, class: 'btn btn-primary'
+- else
+  h1.font-weight-normal.mt-5.mb-5
+    = @user.name
+    | さんのページ
+  .mypagecontainer
+    p.font-weight-normal.mt-5.mb-5
+      = @user.name
+  .mypagecontainer
+    p.font-weight-normal.mt-5.mb-5
+      = @user.player_uid
+  / .mypagecontainer
+    / p.font-weight-normal.mt-5.mb-5
+      / = @user.player
+  .mypagecontainer
+    p.font-weight-normal.mt-5.mb-5
+      = @user.world_rank
+  .mypagecontainer
+    p.font-weight-normal.mt-5.mb-5
+      = @user.introduction
 

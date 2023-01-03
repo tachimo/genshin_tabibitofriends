@@ -11,6 +11,8 @@ html
     script crossorigin="anonymous" src="https://kit.fontawesome.com/86e522f191.js" 
   body
     .container
+      - if flash.notice.present?
+        .alert.alert-success= flash.notice
       = render 'shared/header'
       = yield
       = render 'shared/footer'

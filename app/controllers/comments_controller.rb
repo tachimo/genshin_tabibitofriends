@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to board_path(@comment.board), notice: "コメントを作成しました。"
     else
-      flash.now[:danger] = ("コメント作成に失敗しました。")
+      flash.now[:notice] = ("コメント作成に失敗しました。")
       redirect_to board_path(@comment.board)
     end
   end
@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = current_user.comments.find(params[:id])
     @comment.destroy!
-    redirect_to board_path(@comment.board)
+    redirect_to board_path(@comment.board), notice: "コメントを削除しました。"
   end
 
   private

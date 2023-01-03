@@ -2,8 +2,15 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import 'top';
 
+body {
+  background-color: ivory;
+}
+
+header#header.header-top.shadow-sm {
+  width: 100%;
+}
+
 .header-container {
-  position: right;
   text-align: right;
   padding: 10px;
 }
@@ -19,4 +26,103 @@
 
 .footer-button-container {
   padding: 10px;  
+}
+
+.link-button{
+  display: inline-block;
+  margin: 5px;
+}
+
+.logout-button {
+  display: inline-block;
+}
+
+/* home-topのcss */
+.new-player {
+  margin: 8px;
+  text-align: center;
+  text-shadow: black;
+}
+
+.new-players {
+  margin: 10px;
+  flex-direction: row;
+}
+
+/* uaer-indexのcss */
+.user-index-title {
+  text-align: center;
+  margin: 30px;
+}
+
+ul {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.user-board {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.username-button {
+  border-radius: 16px;
+}
+
+/* user-showのcss */
+.my-page {
+  text-align: center;
+}
+
+.mypage-image {
+  background-image: url("2021021911253557998.png");
+  background-size: auto;
+  background-position: center;
+}
+
+tr {
+  background-color: gainsboro;
+}
+
+th {
+  border:1px solid #ccc;
+  padding:10px;
+  background:#EFEFEF;
+}
+
+td {
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+/* boardのcss */
+.board-index {
+  text-align: center;
+  margin: 30px;
+}
+
+.board-list {
+  text-align: center;
+  margin: 10px;
+}
+
+/* board-indexのcss */
+ul.boards {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  gap: 24px 6%;
+}
+
+.friend-board {
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  column-count: 4;
 }

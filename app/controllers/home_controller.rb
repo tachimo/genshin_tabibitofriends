@@ -1,3 +1,5 @@
 class HomeController < ApplicationController
-  def top; end
+  def top
+    @users = User.all.order("updated_at DESC").limit(2)
+  end
 end

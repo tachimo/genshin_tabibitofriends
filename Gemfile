@@ -68,6 +68,7 @@ gem 'html2slim'
 
 gem 'ransack'
 gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
 
 gem 'pry-byebug'
 gem 'pry-rails'

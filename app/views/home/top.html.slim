@@ -1,7 +1,24 @@
-div.top-wrapper
-  div.top-inner-text
+.top-wrapper
+  .top-inner-text
     - image_tag '2021021911190187195.png'
     h1
       | 旅人フレンズ
     p
       | 原神プレイヤーマッチング掲示板
+
+.new-player
+  h1
+    | 新規登録旅人フレンド
+.new-board
+  ul.users
+    - @users.each do |user|
+      .card style=("width: 18rem;")
+        .card-body
+          .column.flex-direction:row
+            /# = gravatar_for user, size: 50
+            = link_to user.name, user
+            br
+              = user.name
+            br
+              = user.world_rank
+            = link_to "test", "#", class: "btn btn-primary"

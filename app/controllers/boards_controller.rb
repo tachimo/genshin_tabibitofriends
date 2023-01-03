@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
   def index
     @search = Board.ransack(params[:q])
-    @boards = @search.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    @boards = @search.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page]).per(20)
   end
 
   def new

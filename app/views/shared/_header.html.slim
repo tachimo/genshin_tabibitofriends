@@ -1,11 +1,18 @@
-header#header.header-top
-  div.header-container
+header#header.header-top.shadow
+  .header-container
+    .text-right
       = link_to 'ホーム', root_path, class: 'btn btn-outline-primary'
       - if logged_in?
-        = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'
-        = button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-outline-primary'
-        = link_to '旅人一覧', users_path, class: 'btn btn-outline-primary'
-        = link_to '募集一覧', boards_path, class: 'btn btn-outline-primary'
+        .link-button
+          = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'
+        .link-button
+          = link_to '旅人一覧', users_path, class: 'btn btn-outline-primary'
+        .link-button
+          = link_to '募集一覧', boards_path, class: 'btn btn-outline-primary'
+        .logout-button
+          = button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-outline-primary', data: {comfirm: "Are you sure?"}
       - else
-        = link_to '新規登録', new_user_path, class: 'btn btn-outline-primary'
-        = link_to 'ログイン', login_path, class: 'btn btn-outline-primary'
+        .link-button
+          = link_to '新規登録', new_user_path, class: 'btn btn-outline-primary'
+        .link-button
+          = link_to 'ログイン', login_path, class: 'btn btn-outline-primary'

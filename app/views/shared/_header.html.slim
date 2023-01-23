@@ -1,7 +1,9 @@
 header#header.header-top.shadow
   .header-container
-    .text-right
+    .text-left
       = link_to 'ホーム', root_path, class: 'btn btn-outline-primary'
+    .text-right
+      = link_to '使い方', home_how_path, class: 'btn btn-outline-primary'
       - if logged_in?
         .link-button
           = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'

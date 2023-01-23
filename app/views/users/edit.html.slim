@@ -1,21 +1,21 @@
-div
+.mypage-edit
   h1
     |  マイページ入力画面
   
-  = form_with model: @user, url: user_path, local: true do |f|
-    .form-group
-      = f.label :name, 'ユーザーネーム'
-      = f.text_field :name, class: 'form-control'
-    .form-group
-      = f.label :player_uid, 'UID'
-      = f.text_field :player_uid, class: 'form-control'
-    .form-group
-      = f.label :world_rank, '世界ランク'
-      = f.text_field :world_rank, class: 'form-control'
-    / .form-group
-      / = f.label :player, '使用キャラ'
-      / = f.text_field :player, class: 'form-control'
-    .form-group
-      = f.label :introduction, '普段のゲームプレイ内容'
-      = f.text_area :introduction, class: 'form-control', size: '20x10'
-    = f.submit '作成する', class: 'btn btn-primary'
+= form_with model: @user, url: user_path, local: true do |f|
+  .form-group
+    = f.label :name, 'ユーザーネーム'
+    = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :player_uid, 'UID'
+    = f.text_field :player_uid, class: 'form-control'
+  .form-group
+    = f.label :world_rank, '世界ランク'
+    = f.text_field :world_rank, class: 'form-control'
+  / .form-group
+    / = f.label :player, '使用キャラ'
+    / = f.text_field :player, class: 'form-control'
+  .form-group
+    = f.label :introduction, '普段のゲームプレイ内容'
+    = f.text_area :introduction, class: 'form-control', size: '20x10'
+  = f.submit '作成する', class: 'btn btn-primary'

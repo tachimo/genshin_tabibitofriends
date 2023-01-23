@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
 
   get 'friends/top'
+
+  get 'home/how'
   
   resources :users, only: %i[index new create edit show update destroy]
   resources :boards, only: %i[index new create edit show update destroy] do

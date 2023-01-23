@@ -10,6 +10,18 @@ header#header.header-top.shadow-sm {
   width: 100%;
 }
 
+.text-left {
+  text-align: left;
+  position: absolute;
+  padding: 15px 10px;
+  flex-direction: row;
+}
+
+.text-right {
+  text-align: right;
+  padding: 10px;
+}
+
 .header-container {
   text-align: right;
   padding: 10px;
@@ -49,7 +61,25 @@ header#header.header-top.shadow-sm {
   flex-direction: row;
 }
 
-/* uaer-indexのcss */
+.top-center-text {
+  text-align: center;
+  margin-bottom: 30px;
+  color: red;
+}
+
+.how-wrapper {
+  margin: 30px;
+  text-align: center;
+}
+
+/* how-pageのcss */
+.how-image {
+  margin: 30px;
+  border: solid;
+  border-color: #bbb;
+}
+
+/* user-indexのcss */
 .user-index-title {
   text-align: center;
   margin: 30px;
@@ -99,6 +129,11 @@ td {
   padding:10px;
 }
 
+.mypage-edit {
+  text-align: center;
+  margin: 30px;
+}
+
 /* boardのcss */
 .board-index {
   text-align: center;
@@ -125,4 +160,9 @@ ul.boards {
   display: flex;
   flex-direction: row;
   column-count: 4;
+}
+
+.board-show {
+  text-align: center;
+  margin: 30px;
 }

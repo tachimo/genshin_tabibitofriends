@@ -1,16 +1,24 @@
+.top-center-text
+  h1
+    | ゲーム原神のフレンド募集サイト
+
 .top-wrapper
   .top-inner-text
     - image_tag '2021021911190187195.png'
-    h1
+    h2
       | 旅人フレンズ
     p
-      | 原神プレイヤーマッチング掲示板
+      | 原神プレイヤーマッチング
 
-.top-center-text
-  h2
-    | このサイトはゲーム原神のフレンド募集サイトです！
-  h3
-    | 本サイトの使い方をチェック！！
+.new-loginmenber
+  - if logged_in?
+    / # h2
+      | ログイン中
+  - else
+    h2
+      | 会員登録はこちらから
+      | ↓
+    = link_to '新規会員登録', new_user_path, class: 'btn btn-outline-primary'
 
 .new-player
   h1
@@ -27,4 +35,4 @@
               = user.name
             br
               = user.world_rank
-            = link_to "test", "#", class: "btn btn-primary"
+            = link_to "ユーザーページへ", user, class: "btn btn-primary"

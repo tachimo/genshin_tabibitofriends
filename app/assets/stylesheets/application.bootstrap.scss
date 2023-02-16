@@ -63,11 +63,16 @@ header#header.header-top.shadow-sm {
 
 .top-center-text {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px;
   color: red;
 }
 
 .how-wrapper {
+  margin: 30px;
+  text-align: center;
+}
+
+.new-loginmenber {
   margin: 30px;
   text-align: center;
 }
@@ -104,14 +109,21 @@ ul {
 }
 
 /* user-showのcss */
-.my-page {
-  text-align: center;
-}
 
 .mypage-image {
   background-image: url("2021021911253557998.png");
-  background-size: auto;
-  background-position: center;
+  background-size: cover;
+  background-position: center top;
+  width: 100%;
+  height: 10vh;
+  margin: 40px 0px;
+  
+  .center-text {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 tr {

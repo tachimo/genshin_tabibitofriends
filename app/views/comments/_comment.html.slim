@@ -19,8 +19,5 @@ td
     ul.list-inline.justify-content-center[style="float: right;"]
 
       li.list-inline-item
-        = link_to "#", class: 'js-edit-comment-button' 
-          = icon 'fa', 'pen'
-      li.list-inline-item
         = button_to comment_path(comment), method: :delete, remote: true, class: "btn btn-danger"
           = icon 'fa', 'trash'

@@ -8,7 +8,7 @@ header#header.header-top.shadow
         .link-button
           = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'
         .link-button
-          = link_to '旅人一覧', users_path, class: 'btn btn-outline-primary'
+          = link_to '旅人一覧', friends_top_path, class: 'btn btn-outline-primary'
         .link-button
           = link_to '募集一覧', boards_path, class: 'btn btn-outline-primary'
         .logout-button

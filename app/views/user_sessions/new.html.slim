@@ -7,5 +7,5 @@ h1 ログインページ
   .form-group
     = f.label :password, 'パスワード'
     = f.password_field :password, class: 'form-control'
-
-  = f.submit 'ログイン', class: 'btn btn-primary'
+  .login-button
+    = f.submit 'ログイン', class: 'btn btn-primary'

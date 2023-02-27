@@ -1,20 +1,20 @@
-header#header.header-top.shadow
-  .header-container
-    .text-left
+.header-container
+  header#header.header-top.shadow.bg-body
+    .link-button-home
       = link_to 'ホーム', root_path, class: 'btn btn-outline-primary'
-    .text-right
+    .link-button-help
       = link_to '使い方', home_how_path, class: 'btn btn-outline-primary'
       - if logged_in?
         .link-button
           = link_to 'マイページ', user_path(current_user.id), class: 'btn btn-outline-primary'
-        .link-button
+        .link-button-user
           = link_to '旅人一覧', friends_top_path, class: 'btn btn-outline-primary'
         .link-button
           = link_to '募集一覧', boards_path, class: 'btn btn-outline-primary'
         .logout-button
           = button_to 'ログアウト', logout_path, method: :delete, class: 'btn btn-outline-primary', data: {comfirm: "Are you sure?"}
       - else
-        .link-button
+        .link-button-newuser
           = link_to '新規登録', new_user_path, class: 'btn btn-outline-primary'
         .link-button
           = link_to 'ログイン', login_path, class: 'btn btn-outline-primary'

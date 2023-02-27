@@ -10,5 +10,6 @@ h1 新規登録
   .form-group
     = f.label :password, 'パスワード'
     = f.password_field :password, class: 'form-control'
-  = f.submit '登録する', class: 'btn btn-primary'
+  .newuser-button
+    = f.submit '登録する', class: 'btn btn-primary'
 

@@ -2,9 +2,9 @@
   .mypage-image
     - image_tag '2021021911253557998.png'
     h1.font-weight-normal.mt-5.mb-5
-    .center-text
-      h1
-        | マイページ
+      .center-text
+        h1
+          | マイページ
 - if logged_in? && @user == current_user
   table.table.table
     tbody

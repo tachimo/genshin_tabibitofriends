@@ -5,20 +5,25 @@ h1 募集の詳細
 table.table.table-hover
   tbody
     tr
-      th= Board.human_attribute_name(:id)
+      th= '募集番号'
+      Board.human_attribute_name(:id)
       td= @board.id
     tr
-      th= Board.human_attribute_name(:title)
+      th= '募集タイトル'
+      Board.human_attribute_name(:title)
       td= @board.title
     tr
-      th= Board.human_attribute_name(:body)
+      th= '募集内容'
+      Board.human_attribute_name(:body)
       td= simple_format(h(@board.body), {}, sanitize: false, wrapper_tag: "div")
     tr
-      th= Board.human_attribute_name(:created_at)
-      td= @board.created_at
+      th= '登録日'
+      Board.human_attribute_name(:created_at)
+      td= @board.created_at.strftime("%Y-%m-%d %H:%M")
     tr
-      th= Board.human_attribute_name(:update_at)
-      td= @board.updated_at
+      th= '更新日'
+      Board.human_attribute_name(:update_at)
+      td= @board.updated_at.strftime("%Y-%m-%d %H:%M")
   
 = link_to '編集', edit_board_path, class: 'btn btn-primary mr-3'
 / = button_to '削除', @board, method::delete, data: { confirm: "募集「#{@board.title}」を削除します。よろしいですか？"}, class: "btn btn-danger"

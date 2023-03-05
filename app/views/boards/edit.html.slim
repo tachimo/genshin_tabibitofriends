@@ -5,9 +5,9 @@ h1 募集内容編集
 
 = form_with model: @board, local: true do |f|
   .form-group
-    = f.label :title
+    = f.label :title, '募集タイトル'
     = f.text_field :title, class: 'form-control', id: 'board_title'
   .form-group
-    = f.label :body
+    = f.label :body, '募集内容'
     = f.text_area :body, class: 'form-control', id: 'board_body'
   = f.submit '更新する', class: 'btn btn-primary'
